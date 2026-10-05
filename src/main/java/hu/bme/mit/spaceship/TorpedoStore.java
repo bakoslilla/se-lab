@@ -39,7 +39,7 @@ public class TorpedoStore {
 
     // simulate random overheating of the launcher bay which prevents firing
     
-    double r = this.generator.nextDouble();
+    double r = this.generator.nextDouble(); //A this kulcsszóra azért volt szükség, hogy egyértelműen az osztály saját generator mezőjére hivatkozzunk a lokális változók helyett, így a kód tisztább és olvashatóbb lett.
 
     if (r >= FAILURE_RATE) {
       // successful firing
